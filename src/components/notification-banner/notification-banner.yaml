@@ -1,0 +1,53 @@
+params:
+- name: titleText
+  type: string
+  required: true
+  description: If `titleHtml` is set, this is not required. Text to use within the notification banner. If `titleHtml` is provided, the `titleText` argument will be ignored.
+- name: titleHtml
+  type: string
+  required: true
+  description: If `titleText` is set, this is not required. HTML to use within the notification banner. If `titleHtml` is provided, the `titleText` argument will be ignored.
+- name: headingLevel
+  type: integer
+  required: false
+  description: Heading level, from 1 to 6. Default is 2.
+- name: text
+  type: string
+  required: true
+  description: If `html` is set, this is not required. Text to use within the notification banner content. If `html` is provided, the `text` argument will be ignored.
+- name: html
+  type: string
+  required: true
+  description: If `text` is set, this is not required. HTML to use within the notification banner content. If `html` is provided, the `text` argument will be ignored.
+- name: classes
+  type: string
+  required: false
+  description: Classes to add to the notification banner container.
+- name: attributes
+  type: object
+  required: false
+  description: HTML attributes (for example data attributes) to add to the notification banner container.
+
+examples:
+- name: default
+  data:
+    text: 'With plain text.'
+
+- name: with html
+  data:
+    html: '<a href="#">With a link</a> and some plain text.'
+
+- name: caution
+  data:
+    classes: dm-notification-banner--caution
+    text: 'Caution advised'
+
+- name: warning
+  data:
+    classes: dm-notification-banner--warning
+    text: 'Warning'
+
+- name: with an action
+  data:
+    classes: dm-notification-banner--warning
+    html: '<p>Are you sure?</p><button class="govuk-button--warning">Action button</button>'
