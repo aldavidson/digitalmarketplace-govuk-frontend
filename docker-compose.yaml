@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  review:
+    image: digitalmarketplace/govuk-frontend-review:v2.13.0
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./package:/src/package
+      - ./src:/src/src
+
+      - ./app/views/examples:/src/app/views/examples
+
+      - ./app/full-page-examples.js:/src/app/full-page-examples.js
+      - ./app/full-page-examples.test.js:/src/app/full-page-examples.test.js
+      - ./app/views/full-page-examples:/src/app/views/full-page-examples
+
+      - /src/node_modules

@@ -1,0 +1,22 @@
+{% extends "_generic.njk" %}
+
+{% set pageTitle = "Page not found" %}
+{% block pageTitle %}Digital Marketplace - {{ pageTitle }}{% endblock %}
+
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">{{ pageTitle }}</h1>
+
+      <p class="govuk-body">
+        Check you’ve entered the correct web address or start again on the Digital Marketplace homepage.
+      </p>
+
+      <p class="govuk-body">
+        If you can’t find what you’re looking for, contact us at <a class="govuk-link" href="mailto:cloud_digital@crowncommercial.gov.uk?subject=Digital%20Marketplace%20feedback" title="Please send feedback to cloud_digital@crowncommercial.gov.uk">cloud_digital@crowncommercial.gov.uk</a>
+      </p>
+    </div>
+  </div>
+{% endblock %}
